@@ -1,0 +1,2 @@
+def is_high_score(movie, score_threshold=5.5):
+    return movie['imdb_score'] > score_threshold

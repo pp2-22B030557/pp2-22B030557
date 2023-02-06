@@ -1,0 +1,12 @@
+def permutations(string):
+    def _permutations(result, prefix, string):
+        if len(string) == 0:
+            result.append(prefix)
+        else:
+            for i in range(len(string)):
+                rem = string[0:i] + string[i+1:]
+                _permutations(result, prefix + string[i], rem)
+    
+    result = []
+    _permutations(result, "", string)
+    return result

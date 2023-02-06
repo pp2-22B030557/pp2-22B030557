@@ -1,0 +1,6 @@
+def average_imdb_score(movies):
+    total_score = 0
+    for movie in movies:
+        total_score += movie.get('imdb_score', 0)
+    average_score = total_score / len(movies)
+    return average_score
